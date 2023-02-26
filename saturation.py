@@ -12,12 +12,12 @@ import termcolor
 where_termcolor = termcolor.__file__
 where_PIL_Image = Image.__file__
 where_PIL_ImageEnhance = ImageEnhance.__file__
-print(f'{termcolor.colored("[Info]","black","on_yellow")}: Using package from {termcolor.colored(where_termcolor, "yellow")}')
-print(f'{termcolor.colored("[Info]","black","on_yellow")}: Using package from {termcolor.colored(where_PIL_Image, "yellow")}')
-print(f'{termcolor.colored("[Info]","black","on_yellow")}: Using package from {termcolor.colored(where_PIL_ImageEnhance, "yellow")}')
+print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_termcolor, "yellow")}')
+print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_PIL_Image, "yellow")}')
+print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_PIL_ImageEnhance, "yellow")}')
 
 # Set input and output folders
-input_folder = r'C:\Users\Daniel\AppData\Roaming\PrismLauncher\instances\Vibracraft\.minecraft\resourcepacks\VibraCraft\assets\minecraft\textures\trims\defaults'
+input_folder = r'C:\Users\Daniel\AppData\Roaming\PrismLauncher\instances\Vibracraft\.minecraft\resourcepacks\VibraCraft\assets\minecraft\textures\trims\em'
 output_folder = r'C:\Users\Daniel\AppData\Roaming\PrismLauncher\instances\Vibracraft\.minecraft\resourcepacks\VibraCraft\assets\minecraft\textures\trims'
 
 # Set saturation factor
@@ -41,7 +41,7 @@ def process_folder(input_folder, output_folder, subdir=''):
                 output_path = os.path.join(output_folder, subdir, filename)
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 image.save(output_path, 'PNG')
-                print(termcolor.colored("[Main]", "black", "on_green") + ": Processed " + termcolor.colored(os.path.join(subdir, filename), "green"))
+                print(f'{termcolor.colored("[Main]", "black", "on_green")}: Processed {termcolor.colored(os.path.join(subdir, filename), "green")}')
 
 
     if sub_folders:
@@ -57,7 +57,7 @@ os.makedirs(output_folder, exist_ok=True)
 
 # Check if input folder is empty
 if not os.listdir(input_folder):
-    print(termcolor.colored(f"Warning: Input folder '{input_folder}' is empty.", 'yellow'))
+    print(f'{termcolor.colored("[WARN]", "black", "on_red")}: {termcolor.colored("Input folder", "red")} {termcolor.colored(input_folder, "black", "on_yellow")} {termcolor.colored("is empty.", "red")}')
 else:
     # Process the input folder
     process_folder(input_folder, output_folder)
