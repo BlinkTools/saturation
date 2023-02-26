@@ -57,7 +57,7 @@ os.makedirs(output_folder, exist_ok=True)
 
 # Check if input folder is empty
 if not os.listdir(input_folder):
-    print(f'{termcolor.colored("[WARN]", "black", "on_red")}: {termcolor.colored("Input folder", "red")} {termcolor.colored(input_folder, "black", "on_yellow")} {termcolor.colored("is empty.", "red")}')
+    print(f'{termcolor.colored("[WARN]", "black", "on_red")}: {termcolor.colored("Input folder", "red")} {termcolor.colored(input_folder, "black", "on_red")} {termcolor.colored("is empty.", "red")}')
 else:
     # Process the input folder
     process_folder(input_folder, output_folder)
