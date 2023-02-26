@@ -1,6 +1,6 @@
 # BlinkTools: Saturation Changer
 ## Overview
-This tool modifies all `.png`/`.jpg` in an from an `input` and changes their saturation (by a `saturation_factor`) using Pillow (PIL)
+This tool takes all `.png`/`.jpg` files from an `input_folder` and changes their saturation (by a `saturation_factor`) using Pillow (PIL) and puts the modified files into an `output_folder`.
 ## Usage
 Open the .py file in your favorite editor and change the path to the `input_folder` and `output_folder` (the script will warn you if the input folder is empty) and also change the `saturation_factor` (this is comparable with how the GIMP saturation works)
 
