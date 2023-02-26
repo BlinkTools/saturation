@@ -1,3 +1,16 @@
+# Set input and output folders
+input_folder = r'input_folder_path'             # <----- Enter input_folder path    (example: C:\Users\Daniel\Pictures\edit\input)
+output_folder = r'output_folder_path'           # <----- Enter output_folder path   (example: C:\Users\Daniel\Pictures\edit\satur)
+
+# Set saturation factor
+saturation_factor = x.x                         # <----- Enter saturation_factor    (examples: 1.2; 1.75; 2.0; 1.12)
+
+
+
+
+
+# Start of the code:
+
 import os
 import sys
 
@@ -15,13 +28,6 @@ where_PIL_ImageEnhance = ImageEnhance.__file__
 print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_termcolor, "yellow")}')
 print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_PIL_Image, "yellow")}')
 print(f'{termcolor.colored("[Info]", "black", "on_yellow")}: Using package from {termcolor.colored(where_PIL_ImageEnhance, "yellow")}')
-
-# Set input and output folders
-input_folder = r'C:\Users\Daniel\AppData\Roaming\PrismLauncher\instances\Vibracraft\.minecraft\resourcepacks\VibraCraft\assets\minecraft\textures\trims\em'
-output_folder = r'C:\Users\Daniel\AppData\Roaming\PrismLauncher\instances\Vibracraft\.minecraft\resourcepacks\VibraCraft\assets\minecraft\textures\trims'
-
-# Set saturation factor
-saturation_factor = 1.75
 
 # Process subfolders flag
 sub_folders = True
